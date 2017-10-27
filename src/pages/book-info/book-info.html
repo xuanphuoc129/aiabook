@@ -1,0 +1,71 @@
+<div class="header">
+    <ion-navbar>
+        <ion-title>Thông tin sách</ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only (click)="goToShare()">
+                <ion-icon name="share" color="dark"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</div>
+<ion-content>
+    <ion-row class="row-header">
+        <ion-col col-4 style="position: relative">
+            <div class="bookpic">
+                <img src="{{book.photoUrl}}">
+            </div>
+        </ion-col>
+        <ion-col col-8>
+            <div class="bookinfo">
+                <h5>{{book.name}}</h5>
+                <br>
+                <p>Tác giả:</p>
+                <p>Đánh giá:
+                    <ion-icon name="star" [class.icon-vote]="score >= '1'"></ion-icon>
+                    <ion-icon name="star" [class.icon-vote]="score >= '2'"></ion-icon>
+                    <ion-icon name="star" [class.icon-vote]="score >= '3'"></ion-icon>
+                    <ion-icon name="star" [class.icon-vote]="score >= '4'"></ion-icon>
+                    <ion-icon name="star" [class.icon-vote]="score == '5'"></ion-icon>
+                </p>
+                <div class="row-button a3-container a3-row ">
+                    <button ion-button icon-only color="light" class="add-button" (click)="addBookLend()">
+                        <ion-icon name="add"></ion-icon>
+                    </button>
+                    <button ion-button color="light" class="button-choice" (click)="goToSelect()">
+                                Muốn đọc 
+                    </button>
+                </div>
+            </div>
+        </ion-col>
+    </ion-row>
+    <ion-row align-items-center style="border-bottom: 1px solid #cccccc">
+        <ion-col col-1>
+            <ion-badge style="border-radius: 50%;" color="secondary">0</ion-badge>
+        </ion-col>
+        <ion-col col-7>
+            <p style="font-size: 12px;margin:0">người đang cho mượn cuốn sách này</p>
+        </ion-col>
+        <ion-col col-4>
+            <button ion-button round color="primary" class="button-view">Xem danh sách</button>
+        </ion-col>
+    </ion-row>
+    <div class="vote">
+        <ion-icon name="star" [class.icon-vote]="score >= '1'" (click)="setScore('1')"></ion-icon>
+        <ion-icon name="star" [class.icon-vote]="score >= '2'" (click)="setScore('2')"></ion-icon>
+        <ion-icon name="star" [class.icon-vote]="score >= '3'" (click)="setScore('3')"></ion-icon>
+        <ion-icon name="star" [class.icon-vote]="score >= '4'" (click)="setScore('4')"></ion-icon>
+        <ion-icon name="star" [class.icon-vote]="score >= '5'" (click)="setScore('5')"></ion-icon>
+        <br>
+        <p>"{{comment}}"</p>
+        <br>
+        <button *ngIf="score >0" margin-top ion-button round (click)="addComment()">Comment</button>
+    </div>
+    <div class="content-book">
+        <ion-label><b>Nội dung sách </b></ion-label>
+    </div>
+
+    <div class="comment">
+        <ion-label><b>Bình luận</b></ion-label>
+
+    </div>
+</ion-content>

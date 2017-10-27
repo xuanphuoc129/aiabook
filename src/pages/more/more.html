@@ -1,0 +1,23 @@
+<ion-header>
+
+    <ion-navbar color="hcolor">
+        <ion-title *ngIf="!isLoading">{{title}}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div class="book-container" *ngIf="!isLoading">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-4 col-lg-2 col-md-3 style="position: relative" *ngFor="let book of books" (click)="viewBook(book)">
+                    <div text-center class="book-item">
+                        <img src={{book.photoUrl}}>
+                        <p>{{book.name}}</p>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

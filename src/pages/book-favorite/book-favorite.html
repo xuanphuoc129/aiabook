@@ -1,0 +1,32 @@
+<ion-header>
+
+    <ion-navbar color="hcolor">
+        <ion-title>LOẠI SÁCH YÊU THÍCH </ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div class="book-container">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-4 col-lg-2 col-md-3 style="position: relative" *ngFor="let book of arr;let i = index" (click)="onSeclectBook(book,i)">
+                    <ion-card text-center [class.book-selected]="!book.selected" class="book-item">
+                        <img src={{book.photoURL}}>
+                        <ion-card-content>{{book.name}}</ion-card-content>
+                    </ion-card>
+                    <div class="check-icon" *ngIf="book.selected">
+                        <ion-icon name="checkmark-circle" color="secondary"></ion-icon>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <div class="button-next">
+        <button ion-button full round icon-right (click)="next()">
+                    Thêm loại sách 
+            <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+    </div>
+</ion-content>

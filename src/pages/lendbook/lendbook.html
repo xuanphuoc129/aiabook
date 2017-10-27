@@ -1,0 +1,52 @@
+<!--
+  Generated template for the LendbookPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="hcolor">
+        <ion-title>Thêm sách cho mượn</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-row class="row-header" *ngIf="!isLoading">
+        <ion-col col-4 style="position: relative">
+            <div class="bookpic">
+                <img src="{{book.photoUrl}}">
+            </div>
+        </ion-col>
+        <ion-col margin-left>
+            <div class="bookinfo">
+                <h5>{{book.name}}</h5>
+                <br>
+                <p>Tác giả:</p>
+                <br>
+                <p>Đánh giá:
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </p>
+            </div>
+        </ion-col>
+    </ion-row>
+    <p padding-left> Số lượng sách có trong tủ</p>
+    <div class="a3-container a3-row a3-justify-center">
+        <p id="quantity">{{quantity}}</p>
+        <button ion-button icon-only class="addbutton" (click)="addquantity()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+        <button ion-button icon-only class="subbutton" color="danger" (click)="subquantity()" *ngIf="quantity>0">
+          <ion-icon name="remove" ></ion-icon>
+        </button>
+    </div>
+    <div class="bottom" *ngIf="quantity>0">
+        <button ion-button round color="secondary" style="width:50%;" (click)="addbooklend()">Thêm sách</button>
+    </div>
+</ion-content>

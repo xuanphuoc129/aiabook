@@ -1,0 +1,25 @@
+<ion-header>
+
+
+
+</ion-header>
+
+
+<ion-content class="background">
+    <div class="header">
+        <h1>Profile picture</h1>
+    </div>
+    <div class="profile-image">
+        <img src="{{photoURL}}">
+    </div>
+    <div>
+        <button ion-button round outline (click)="chooseImage()">Choose an image</button>
+    </div>
+    <div [hidden]="!moveon">
+        <button ion-button round outline (click)="process()">Skip this step</button>
+    </div>
+    <div class="spacer" style="height:10px"></div>
+    <div [hidden]="moveon">
+        <button ion-button round outline (click)="updateprocess()">Upload & process </button>
+    </div>
+</ion-content>

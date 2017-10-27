@@ -1,0 +1,21 @@
+page-address {
+    #map {
+        height: 100%;
+        width: 100%;
+    }
+    .bottom {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 12;
+    }
+    [icon-right] ion-icon {
+        position: absolute;
+        right: 10px;
+    }
+    .button-md-primary {
+        font-size: 17px;
+    }
+}

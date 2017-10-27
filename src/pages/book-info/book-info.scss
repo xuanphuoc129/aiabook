@@ -1,0 +1,103 @@
+page-book-info {
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        // background-color: burlywood;
+    }
+    .row-header {
+        padding-top: 44px;
+        position: relative;
+        left: 0;
+        height: 35%;
+        width: 100%;
+        background: linear-gradient(to top, #DDE1A7, #55E2E5);
+        .bookpic {
+            padding: 5px;
+            width: 100%;
+            height: 100%;
+            img {
+                height: 130px;
+            }
+        }
+        .bookinfo {
+            height: 100%;
+            width: 100%;
+            padding: 5px;
+            h5 {
+                padding: 0;
+                margin: 0;
+                font-size: 13px;
+            }
+            p {
+                font-size: 11px;
+                padding: 0;
+                margin: 0;
+                ion-icon {
+                    color: #5B5454;
+                }
+                .icon-vote {
+                    color: #F4F479;
+                }
+            }
+            .row-button {
+                margin-top: 20px;
+                width: 100%;
+                .add-button {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                }
+                .button-choice {
+                    margin-left: 20px;
+                    height: 30px;
+                    width: 120px;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+    .toolbar-background-md {
+        background-color: transparent;
+    }
+    .toolbar-background-ios {
+        background-color: transparent;
+    }
+    .button-view {
+        height: 30px;
+        width: 100px;
+        font-size: smaller;
+        text-transform: none;
+    }
+    .vote {
+        border-bottom: 1px solid #cccccc;
+        text-align: center;
+        padding: 2px;
+        width: 100%;
+        ion-icon {
+            font-size: 3.5em;
+            color: #ccc;
+        }
+        .icon-vote {
+            color: #F4F479;
+        }
+        .button-md {
+            text-transform: none;
+            height: 3.2rem;
+        }
+        .button-ios {
+            text-transform: none;
+            height: 3.2rem;
+        }
+    }
+    .content-book {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .comment {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

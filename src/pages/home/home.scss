@@ -1,0 +1,108 @@
+page-home {
+    ion-content {
+        z-index: 2;
+    }
+    .slide-auto {
+        height: 165px;
+    }
+    .segment-md .segment-button.segment-activated {
+        color: #488aff;
+    }
+    .segment-md .segment-button {
+        color: black;
+    }
+    .toolbar .segment-md {
+        width: 65%;
+        margin-left: auto;
+    }
+    .container {
+        height: 180px;
+        width: 100%;
+        border-bottom: 0.1px solid #e6e6e6;
+        .title {
+            padding-left: 5px;
+            padding-top: 16px;
+            text-transform: capitalize;
+            font-size: 16px;
+        }
+        .more {
+            text-align: right;
+            padding-right: 16px;
+            padding-top: 18px;
+            text-transform: capitalize;
+            font-size: 13px;
+        }
+    }
+    .scroll-container {
+        height: 150px;
+        overflow-x: scroll;
+        white-space: nowrap;
+        padding-top: 5px;
+        .col-item {
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            left: 0;
+        }
+        img {
+            height: 100px;
+            box-shadow: 1px 1px 1px #b3b3b3;
+        }
+    }
+    .container-user {
+        height: 90px;
+        // position: relative;
+        overflow: auto;
+        white-space: nowrap;
+        border-bottom: 0.1px solid #e6e6e6;
+        .col-item {
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            left: 0;
+        }
+        .col {
+            margin-top: 5px;
+        }
+        img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            padding: 3px;
+            border: 2px solid #1a75ff;
+        }
+    }
+    .label-md {
+        margin: 0;
+    }
+    .label-ios {
+        margin: 0;
+    }
+    .header-md::after {
+        height: 0;
+    }
+    .container-type {
+        margin: 0 !important;
+        height: 70px;
+        ion-card {
+            position: relative;
+            text-align: left;
+            margin: 0;
+            width: 100%;
+        }
+        img {
+            height: 65px;
+        }
+        .card-title {
+            position: absolute;
+            top: 36%;
+            left: 16px;
+            font-size: 1.2em;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+}

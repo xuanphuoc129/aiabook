@@ -1,0 +1,50 @@
+page-lendbook {
+    .row-header {
+        margin-top: 16px;
+        position: relative;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        .bookpic {
+            height: 100%;
+            width: 100%;
+            margin-left: 10px;
+            img {
+                height: 140px;
+            }
+        }
+        .bookinfo {
+            height: 100%;
+            width: 100%;
+            h5 {
+                padding: 0;
+                margin: 0;
+            }
+            p {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+    .addbutton {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        position: absolute;
+        right: 16px;
+    }
+    .subbutton {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        position: absolute;
+        left: 16px;
+    }
+    .bottom {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #ccc;
+        padding-top: 16px;
+    }
+}

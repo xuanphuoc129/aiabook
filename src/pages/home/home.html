@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-toolbar color="light">
+        <ion-buttons left>
+            <button ion-button icon-only>
+                <ion-icon name="menu" color="light"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-segment [(ngModel)]="segment_container">
+            <ion-segment-button value="home">
+                Trang chủ
+            </ion-segment-button>
+            <ion-segment-button value="type">
+                Thể loại
+            </ion-segment-button>
+        </ion-segment>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="goToSearch()">
+                <ion-icon name="search"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div [ngSwitch]="segment_container">
+        <div *ngSwitchCase="'home'">
+            <div class="slide-auto" *ngIf="!isLoading">
+                <ion-slides #idSlides autoplay="3000" loop="true" pager centeredSlides="true">
+                    <ion-slide *ngFor="let item of slides">
+                        <img [src]="item">
+                    </ion-slide>
+                </ion-slides>
+            </div>
+            <div class="container">
+                <div class="a3-container a3-row a3-content-between">
+                    <ion-label class="title">Mới Nhất</ion-label>
+                    <ion-label class="more" color="primary" (click)="viewMore('twenty-book')">Xem thêm</ion-label>
+                </div>
+                <div class="scroll-container">
+                    <ion-col col-3 *ngFor="let book of newBookList" class="col-item">
+                        <div (click)="viewBookInfo(book)">
+                            <img [src]="book.photoUrl">
+                            <ion-label style="font-size:14px;margin-top:3px">{{book.name}}</ion-label>
+                        </div>
+                    </ion-col>
+                </div>
+            </div>
+            <div class="container">
+                <div class="a3-container a3-row a3-content-between">
+                    <ion-label class="title">Top 20 cuốn sách nên đọc trước tuổi 30</ion-label>
+                    <ion-label class="more" color="primary" (click)="viewMore('twenty-book')">Xem thêm</ion-label>
+                </div>
+                <div class="scroll-container">
+                    <ion-col col-3 *ngFor="let books of twenty_book" class="col-item">
+                        <div (click)="viewBookInfo(books)">
+                            <img [src]=" books.photoUrl ">
+                            <ion-label style="font-size:12px;margin-top:3px ">{{books.name}}</ion-label>
+                        </div>
+                    </ion-col>
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'type'">
+            <div class="container-type" *ngFor="let item of types">
+                <ion-card>
+                    <img src="{{item.imgUrl}}">
+                    <div class="card-title">{{item.name}}</div>
+                </ion-card>
+            </div>
+        </div>
+    </div>
+
+</ion-content>

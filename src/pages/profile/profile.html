@@ -1,0 +1,70 @@
+<ion-header class="header">
+    <div class="bg"></div>
+    <div class="profile-image">
+        <img src="{{avatar}}">
+    </div>
+    <h5>{{displayName}}</h5>
+    <ion-row class="row-choice">
+        <ion-col style="border-right:1px solid #cccccc;">
+            <div class="a3-container a3-column a3-items-center a3-justify-center">
+                <p>0</p>
+                <p>Sách cho mượn</p>
+            </div>
+        </ion-col>
+        <ion-col style="border-right:1px solid #cccccc">
+            <div class="a3-container a3-column a3-items-center a3-justify-center">
+                <p>0</p>
+                <p>Đang đọc</p>
+            </div>
+        </ion-col>
+        <ion-col>
+            <div class="a3-container a3-column a3-items-center a3-justify-center">
+                <p>0</p>
+                <p>Sách muốn đọc</p>
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-header>
+<ion-content>
+    <ion-item-group>
+        <ion-item-divider color="light">
+            Cập nhật thông tin cá nhân
+        </ion-item-divider>
+        <ion-item (click)="updateProfileImage()">
+            <ion-icon item-start name="person"></ion-icon>
+            Ảnh đại diện</ion-item>
+        <ion-item (click)="updateAddress()">
+            <ion-icon item-start name="pin"></ion-icon>
+            Địa chỉ</ion-item>
+        <ion-item (click)="updateDisplayName()">
+            <ion-icon item-start name="create"></ion-icon>
+            Nick name</ion-item>
+        <ion-item (click)="updateFavoriteBook()">
+            <ion-icon item-start name="list"></ion-icon>
+            Danh mục sách yêu thích</ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color="light">
+            Về AiaBook
+        </ion-item-divider>
+        <ion-item (click)="viewAbout()">
+            <ion-icon name="information" item-start></ion-icon>
+            Thông tin ứng dụng
+        </ion-item>
+        <ion-item (click)="report()">
+            <ion-icon name="alert" item-start></ion-icon>
+            Báo cáo
+        </ion-item>
+        <ion-item (click)="goToFanpage()">
+            <ion-icon name="logo-facebook" item-start></ion-icon>
+            Fanpage
+        </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color="light">Đăng xuất</ion-item-divider>
+        <ion-item (click)="signout()">
+            <ion-icon item-start name="log-out"></ion-icon>
+            Đăng xuất
+        </ion-item>
+    </ion-item-group>
+</ion-content>

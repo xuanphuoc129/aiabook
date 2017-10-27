@@ -1,0 +1,21 @@
+page-more {
+    img {
+        height: 120px;
+    }
+    .book-item {
+        font-weight: normal;
+    }
+    .book-container {
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        overflow: scroll;
+        position: relative;
+    }
+    .col {
+        text-align: center;
+    }
+    .row {
+        height: 150px;
+    }
+}

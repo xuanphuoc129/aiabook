@@ -1,0 +1,76 @@
+page-book-favorite {
+    .check-icon {
+        position: absolute;
+        top: 40%;
+        left: 45%;
+    }
+    .card-ios {
+        margin: 0;
+        width: 100%;
+    }
+    .card-md {
+        margin: 0;
+        width: 100%;
+    }
+    img {
+        height: 120px;
+    }
+    .card-content-md {
+        padding: 0;
+        font-size: 1.1rem;
+        margin-top: 5px;
+    }
+    .card-content-ios {
+        padding: 0;
+        font-size: 1.1rem;
+        margin-top: 5px;
+    }
+    .book-item {
+        font-weight: normal;
+    }
+    .book-selected {
+        filter: opacity(0.3);
+        font-weight: bold;
+    }
+    .check-box {
+        position: absolute;
+        top: 40%;
+        left: 45%;
+    }
+    .book-container {
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        overflow: scroll;
+        position: relative;
+    }
+    .button-next {
+        height: 40px;
+        text-align: center;
+        margin: 16px;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+        z-index: 3;
+    }
+    .button-ios {
+        height: 2.2em;
+    }
+    .button-md {
+        text-transform: capitalize;
+    }
+    [icon-right] ion-icon {
+        position: absolute;
+        right: 16px;
+    }
+    .col {
+        text-align: center;
+    }
+    .row {
+        height: 150px;
+    }
+    img {
+        // opacity: 0.6;
+    }
+}

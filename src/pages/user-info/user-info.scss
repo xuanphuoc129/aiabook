@@ -1,0 +1,28 @@
+page-user-info {
+    .row {
+        border-bottom: 1px solid #cccccc;
+    }
+    p {
+        margin: 0;
+        padding-top: 2px;
+    }
+    .row-header {
+        height: 25%;
+        .profilepic {
+            padding: 10px;
+            img {
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                border: 1px solid #6767E8;
+                padding: 2px;
+            }
+        }
+        .profileinfo {
+            margin-top: 10px;
+        }
+    }
+    .badge-md {
+        border-radius: 50%;
+    }
+}

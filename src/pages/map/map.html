@@ -1,0 +1,47 @@
+<ion-header>
+
+    <ion-navbar color="hcolor">
+        <ion-title>NGƯỜI DÙNG GẦN BẠN</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div #map id="map"></div>
+    <div class="list-result">
+        <ion-label padding-left>Hiển thị {{result.length}} kết quả</ion-label>
+        <ion-list inset>
+            <div class="container-1" *ngFor="let user of result">
+                <ion-row>
+                    <ion-col col-3>
+                        <div class="img-container" (click)="viewInfo(user)">
+                            <img [src]="user.photoURL">
+                        </div>
+                    </ion-col>
+                    <ion-col>
+                        <div class="col-2">
+                            <p style="font-weight: bold">{{user.displayName}}</p>
+                            <p>{{user.address}}</p>
+                            <ion-note class="note">{{user.distance}}</ion-note>
+                            <ion-row align-items-center>
+                                <ion-col style="padding-left:0;">
+                                    <div class="a3-container a3-row">
+                                        <ion-badge color="primary">{{user.booklend}}</ion-badge>
+                                        <p>Sách cho mượn</p>
+                                    </div>
+                                </ion-col>
+                                <ion-col>
+                                    <div class="a3-container a3-row">
+                                        <ion-badge color="secondary">{{user.bookread}}</ion-badge>
+                                        <p>Sách đang đọc</p>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-list>
+    </div>
+</ion-content>

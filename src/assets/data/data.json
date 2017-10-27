@@ -1,0 +1,43 @@
+{
+    "list": [{
+            "name": "Lịch sử chính trị",
+            "imgUrl": "assets/bg/1.jpg"
+        },
+        {
+            "name": "Văn học nước ngoài",
+            "imgUrl": "assets/bg/2.jpg"
+        },
+        {
+            "name": "Tình cảm lãng mạn",
+            "imgUrl": "assets/bg/3.jpg"
+        },
+        {
+            "name": "Trinh thám kinh dị",
+            "imgUrl": "assets/bg/4.png"
+        },
+        {
+            "name": "Tài chính-kinh tế",
+            "imgUrl": "assets/bg/5.jpg"
+        },
+        {
+            "name": "Khoa học viễn tưởng",
+            "imgUrl": "assets/bg/6.jpg"
+        },
+        {
+            "name": "Kỹ năng mềm",
+            "imgUrl": "assets/bg/7.jpg"
+        },
+        {
+            "name": "Văn học",
+            "imgUrl": "assets/bg/8.jpg"
+        },
+        {
+            "name": "Văn hóa-tôn giáo",
+            "imgUrl": "assets/bg/9.jpg"
+        },
+        {
+            "name": "Nuôi dạy con",
+            "imgUrl": "assets/bg/10.jpg"
+        }
+    ]
+}
